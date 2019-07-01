@@ -7,14 +7,18 @@ import {QuestionComponent} from './question.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule,MatInputModule,MatCardModule} from '@angular/material';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './api.service';
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionComponent
+    QuestionComponent,
+    
 
   ],
   imports: [
     BrowserModule,
+    HttpClientModule, 
     AppRoutingModule,
     MatButtonModule,
     BrowserAnimationsModule,
@@ -22,7 +26,7 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

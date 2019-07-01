@@ -4,9 +4,9 @@ import {HttpClient} from  '@angular/common/http';
 @Injectable()
 export class ApiService{
     constructor( private http:HttpClient){}
-    postQuestion(question:string){
+    postQuestion(question){
 
-        this.http.post('',question)
+        this.http.post('https://localhost:44309/api/question',question)
         .subscribe(response => {
             console.log(response);
         })

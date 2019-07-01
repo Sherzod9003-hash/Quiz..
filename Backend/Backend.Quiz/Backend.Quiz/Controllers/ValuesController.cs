@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace quiz.backend.Controllers
+namespace Backend.Quiz.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
