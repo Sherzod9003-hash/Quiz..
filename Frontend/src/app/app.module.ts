@@ -9,10 +9,13 @@ import {MatButtonModule,MatInputModule,MatCardModule} from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './api.service';
+import { QuestionsComponent } from './questions/questions.component';
+import {MatListModule} from '@angular/material/list';
 @NgModule({
   declarations: [
     AppComponent,
     QuestionComponent,
+    QuestionsComponent,
     
 
   ],
@@ -24,7 +27,8 @@ import { ApiService } from './api.service';
     BrowserAnimationsModule,
     MatInputModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    MatListModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

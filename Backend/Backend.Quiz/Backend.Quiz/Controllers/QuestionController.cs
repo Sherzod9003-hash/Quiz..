@@ -19,16 +19,14 @@ namespace Backend.Quiz.Controllers
          [HttpPost]
     public void Post([FromBody] Question question)
     {
+            question.WrongAnswersString = String.Join(',', question.WrongAnswers.ToArray());
             _context.Questions.Add(question);
             _context.SaveChanges();
     }
        [HttpGet]
         public ActionResult<IEnumerable<Question >> Get()
         {
-            return new Question[] {
-                new Question {Text =  " Bazaga ulash uchun nima qilish kerak birinchi?"},
-                new Question {Text =  " entity fremwork bu nima?"}
-            };
+            return _context.Questions;
         }
     }
    
