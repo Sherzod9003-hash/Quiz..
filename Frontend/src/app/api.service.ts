@@ -8,7 +8,7 @@ export class ApiService{
  
         this.http.post('https://localhost:44309/api/question',question)
         .subscribe(response => {
-            console.log(response);
+            console.log(response);  
         })
 
     }
